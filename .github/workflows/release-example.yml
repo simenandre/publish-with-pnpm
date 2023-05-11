@@ -1,11 +1,3 @@
-# publish-with-pnpm
-
-This composite action will publish your package to NPM using PNPM.
-
-It parses tag version and set that in `package.json` before publishing, and pushes that
-to the default branch after publishing.
-
-```yaml
 name: Release to NPM
 
 on:
@@ -37,4 +29,3 @@ jobs:
       - uses: simenandre/publish-with-pnpm@v1
         with:
           npm-auth-token: ${{ secrets.NPM_TOKEN }}
-```
