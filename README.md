@@ -1,4 +1,4 @@
-# publish-with-pnpm
+# simenandre/publish-with-pnpm
 
 This composite action will publish your package to NPM using PNPM.
 
