@@ -14,7 +14,7 @@ runs:
   steps:
     - name: Set version to release tag 📝
       shell: bash
-      run: pnpm version from-git --no-commit-hooks --no-git-tag-version
+      run: pnpm version from-git --no-commit-hooks --no-git-tag-version --allow-same-version
 
     - name: Publish 🚀
       shell: bash
