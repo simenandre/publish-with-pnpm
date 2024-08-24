@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
 
       - name: Use Node LTS ✨
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
           registry-url: https://registry.npmjs.org
@@ -34,7 +34,7 @@ jobs:
       - name: Build 🔨
         run: pnpm build
 
-      - uses: simenandre/publish-with-pnpm@v1
+      - uses: simenandre/publish-with-pnpm@v2
         with:
           npm-auth-token: ${{ secrets.NPM_TOKEN }}
 ```
